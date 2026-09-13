@@ -1,0 +1,151 @@
+{
+  "common": {
+    "active_tab": "· {label} ·"
+  },
+  "commands": {
+    "start": "Старт та меню",
+    "war": "Статус колод війни",
+    "race": "Гонка: колоди, медалі, прогноз",
+    "rank": "Рейтинг клану в його регіоні",
+    "missing": "Гравці не в TG-групі"
+  },
+  "menu": {
+    "war": "{chart} Війна",
+    "race": "🏁 Гонка",
+    "rank": "{trophy} Рейтинг",
+    "missing": "{people} Відсутні"
+  },
+  "registration": {
+    "welcome": "{wave} Ласкаво просимо в клан!\n\n{phone} Як зареєструватися:\n1. Відкрийте Clash Royale → профіль (іконка гравця)\n2. Натисніть на тег під ніком (приклад з фото: #YG9JVJY2)\n3. Оберіть «Copy Tag» (Скопіювати тег)\n4. Відправте скопійований тег сюди в цей чат\n\n{pin} Приклад тегу: #9YJ8P2L (завжди з решіткою на початку)\n\n{loop} Якщо у вас кілька акаунтів (твіків) в клані — зареєструйте всі, <b>але спочатку зареєструйте основний.</b> Він буде вашим ніком у групі.\n\n{check} Після успішної реєстрації ви отримаєте посилання на групу в Telegram.",
+    "success": "{check} <b>Реєстрація успішна!</b>\n\n{gamepad} <b>Гравець:</b> {name}\n\n{point} <b>Приєднуйтесь до чату клану:</b>\n{link}\n\n{lock} <i>Не діліться посиланням — воно працює лише для вас. Лише зареєстровані гравці можуть приєднатися.</i>",
+    "success_in_group": "{check} <b>Реєстрація успішна!</b>\n\n{gamepad} <b>Гравець:</b> {name}\n\nВи вже в групі клану — більше нічого робити не потрібно.",
+    "already_registered": "{check} <b>Ви вже зареєстровані</b>\n\n{point} <b>Посилання для приєднання до групи:</b>\n{link}\n\n{lock} <i>Не діліться посиланням — воно працює лише для вас.</i>",
+    "bad_tag_format": "Невірний формат тегу. Приклад: #9YJ8P2L",
+    "player_not_found": "Гравець не знайдений.",
+    "player_not_in_clan": "Цей гравець не в нашому клані.",
+    "tag_already_taken": "Цей акаунт вже зареєстрований.",
+    "already_registered_no_invite": "Ви вже зареєстровані. Не вдалося створити запрошення — зверніться до адміністратора.",
+    "invite_failed": "Не вдалося створити запрошення.",
+    "member_joined": "{wave} {name} приєднався до групи!",
+    "member_left": "🚪 {name} покинув групу.",
+    "member_removed": "🚫 {name} видалено з групи."
+  },
+  "access": {
+    "not_registered": "Ви не зареєстровані. Надішліть /start та свій тег гравця Clash Royale, щоб приєднатися.",
+    "join_group_hint": "Приєднайтесь до групи клану. Натисніть Війна, Гонка, Рейтинг або Відсутні, щоб отримати посилання.",
+    "join_group_with_link": "Щоб скористатися командами клану, приєднайтесь до групи.\n\nПосилання: {link}",
+    "join_group_no_link": "Щоб скористатися командами клану, приєднайтесь до групи. Зверніться до адміністратора за посиланням.",
+    "not_allowed": "Не дозволено.",
+    "no_admins_configured": "LOGS_ALLOWED_TG_IDS порожній у .env — немає адмінів."
+  },
+  "unregister": {
+    "usage": "Видалити реєстрацію гравця:\n/unregister #ТЕГ — за тегом Clash Royale\n/unregister @username — за Telegram username\n/unregister 123456789 — за Telegram ID",
+    "not_found": "За «{query}» нікого не зареєстровано.",
+    "confirm": "Telegram: {telegram}\nЗареєстровані акаунти:\n{accounts}\n\nЯкщо видалити всі акаунти, гравця також буде видалено з Telegram-групи.\n\nЩо видалити?",
+    "account": "• {name} · {tag}",
+    "account_main": "• {name} · {tag} (основний)",
+    "telegram_with_username": "@{username} (id {id})",
+    "telegram_id_only": "id {id}",
+    "delete_one": "🗑 Лише {tag}",
+    "delete_all": "🗑 Усі акаунти ({count})",
+    "cancel": "Скасувати",
+    "cancelled": "Скасовано, нічого не видалено.",
+    "done": "✅ Видалено:\n{accounts}",
+    "accounts_left": "Інші акаунти гравця залишились, тож він лишається в групі.",
+    "group_removed": "👢 Також видалено з Telegram-групи. Після нової реєстрації через /start гравець отримає посилання й зможе повернутися.",
+    "group_not_member": "У Telegram-групі гравця не було. Він може зареєструватися заново через /start.",
+    "group_failed": "⚠️ Не вдалося видалити гравця з Telegram-групи — зробіть це вручну або перевірте, що бот може блокувати користувачів. Зареєструватися заново можна через /start.",
+    "nothing_deleted": "Ці акаунти вже видалені."
+  },
+  "api": {
+    "token_error": "Помилка API (перевірте токен Clash Royale).",
+    "rate_limited": "API перевантажено. Спробуйте пізніше.",
+    "generic_error": "Помилка API Clash Royale. Спробуйте пізніше."
+  },
+  "war": {
+    "no_active_war": "Зараз немає активної війни. Війна триває з четверга по понеділок.",
+    "no_active_war_alert": "Зараз немає активної війни. Війна триває з четверга по понеділок. Немає сенсу сповіщати групу.",
+    "remind_too_early_alert": "🔕 Ще рано. Сповіщати групу можна за {hours} год до кінця дня — з {time} UTC.",
+    "report": "Колоди не використані сьогодні:\n\n{players}",
+    "not_in_telegram": "<b>Не в Telegram-групі:</b>\n{players}",
+    "all_decks_used": "🎉 Всі колоди використані! Молодці!",
+    "load_failed": "Не вдалося завантажити дані війни.",
+    "remind_all_button": "🔔 Сповістити всіх",
+    "nobody_to_remind": "Ніхто не має колод для гри",
+    "no_players_in_db": "Немає гравців у базі",
+    "group_send_failed": "Не вдалося надіслати повідомлення в групу. Спробуйте пізніше.",
+    "no_username_alert": "Користувач без @username у Telegram. Додайте username в Налаштування → Ім'я користувача — тоді з’явиться пряме посилання. Або напишіть через гру.",
+    "auto_reminder": "{alarm} УВАГА! Війна закінчується за {time_left}!\n\nЄ гравці з невикористаними колодами — терміново грайте!\n\n{mentions}\n\n⏰ Автоматичне нагадування",
+    "manual_reminder": "{warning} Є гравці, які ще мають колоди для гри. До кінця залишилось: {time_left}\n\n{mentions}\n\nСповістив: {label}",
+    "someone": "Хтось",
+    "unknown_player": "гравець",
+    "tab_today": "Сьогодні",
+    "tab_day": "День {day}",
+    "day_report": "Колоди не використані · день {day}, {date}:\n\n{players}",
+    "day_report_approx": "Колоди не використані · день {day}, {date}:\n\n{players}\n\n<i>Приблизно: останні дані бота за цей день — {time} UTC.</i>",
+    "day_all_used": "🎉 Того дня всі колоди використані!",
+    "day_no_data_alert": "Немає даних за день {day}: бот тоді ще не збирав статистику."
+  },
+  "race": {
+    "title_war": "🏁 Війна · день {day} з {days}",
+    "title_colosseum": "🏟 Колізей · день {day} з {days}",
+    "today": "<b>{title}</b>\n⏳ До кінця дня: {time_left}\n\n{clans}\n\n<i>{legend}</i>",
+    "legend_war": "🃏 колоди · 🏅 медалі за день · ⌀ медалей за колоду · 🎯 прогноз на день · ⛵ човен",
+    "legend_colosseum": "🃏 колоди · 🏅 медалі за день · ⌀ медалей за колоду · 🎯 прогноз на день · Σ медалі за тиждень",
+    "clan": "{place}. {name}\n🃏 {decks}/{max_decks} · 🏅 {medals} · ⌀ {average}\n🎯 {projected} · ⛵ {boat}",
+    "clan_colosseum": "{place}. {name}\n🃏 {decks}/{max_decks} · 🏅 {medals} · ⌀ {average}\n🎯 {projected} · Σ {total}",
+    "training": "💤 Зараз тренувальні дні — війна почнеться в четвер.\n\nМинулі війни — у вкладці «Історія».",
+    "days": "📅 <b>Війна по днях</b>\n\n{days}",
+    "day": "<b>День {day}</b>\n{clans}",
+    "day_clan": "{place}. {name} · 🏅 {medals}",
+    "no_finished_days": "📅 <b>Війна по днях</b>\n\nЗавершених днів цієї війни ще немає.",
+    "history": "📜 <b>Історія воєн</b>\n\n{weeks}",
+    "history_week": "<b>Сезон {season} · тиждень {week}</b> · {date}\n{place} місце · 🏅 {medals}\n🃏 {decks} · ⌀ {average}",
+    "history_week_boat": "<b>Сезон {season} · тиждень {week}</b> · {date}\n{place} місце · 🏅 {medals}\n🃏 {decks} · ⌀ {average} · ⛵ {boat}",
+    "no_history": "📜 <b>Історія воєн</b>\n\nМинулих воєн поки немає.",
+    "tab_today": "🏁 Сьогодні",
+    "tab_days": "📅 По днях",
+    "tab_history": "📜 Історія",
+    "load_failed": "Не вдалося завантажити дані гонки."
+  },
+  "clan": {
+    "rank": "{trophy} <b>Рейтинг клану</b>\n\n{flag} {location}: <b>#{rank}</b>",
+    "rank_not_in_top": "{trophy} <b>Рейтинг клану</b>\n\n{flag} {location}: немає в рейтингу",
+    "no_location": "У клану в Clash Royale не вказано регіон, тому рейтингу немає.",
+    "load_failed": "Не вдалося завантажити дані клану.",
+    "missing_report": "{check} В клані й зареєстровані:\n\n{present}\n\n{telegram} Немає в TG-групі:\n\n{missing}",
+    "nobody": "- ніхто"
+  },
+  "admin": {
+    "panel": "🛠 Адмін-панель\n\n/logs — останні 100 рядків логу бота\n/data — усі зареєстровані гравці (таблиця)\n\n/time — розклад війни в UTC: переглянути й змінити\n{time_usage}\n\n/unregister — видалити реєстрацію гравця (і з Telegram-групи)\n/unregister #ТЕГ · @username · Telegram ID\n\nКоманди працюють лише тут, в особистому чаті з ботом.",
+    "panel_backup": "💾 Щочетверга в час кінця дня війни бекап /data приходить першому адміну з LOGS_ALLOWED_TG_IDS.",
+    "empty": "(пусто)",
+    "part": "Частина {index}/{total}",
+    "backup_header": "Щотижневий бекап бази даних"
+  },
+  "time": {
+    "schedule": "⏱ Розклад війни (UTC)\n🕐 Зараз: {now} UTC\n\n• Кінець дня війни: {end}\n• Нагадування в групу: {reminder} {reminder_note}\n• Кнопка «Сповістити всіх»: з {notify_from} (за {notify_hours} год до кінця)\n• Щотижневий бекап /data: {backup}",
+    "reminder_lead": "(пт–пн, за {lead} до кінця)",
+    "reminder_not_before_end": "(пт–пн)\n  ⚠️ Не раніше кінця дня війни — виправте через /time auto",
+    "backup_next": "чт {date}, {time}",
+    "backup_off": "вимкнено",
+    "usage": "/time boundary год хв — кінець дня війни\n/time reminder год хв — нагадування в групу\n/time auto — нагадування за 30 хв до кінця\n/time auto год хв — кінець дня війни + нагадування за 30 хв до нього\n/time notify год — «Сповістити всіх» за стільки годин до кінця",
+    "set_end": "✅ Кінець дня війни: {end}",
+    "set_reminder": "✅ Нагадування в групу: {reminder}",
+    "set_both": "✅ Кінець дня війни: {end}, нагадування в групу: {reminder}",
+    "set_notify": "✅ «Сповістити всіх» доступна з {notify_from} (за {notify_hours} год до кінця)",
+    "invalid_hours": "❌ Потрібна кількість годин від 1 до 24.\nПриклад: /time notify 12",
+    "invalid_value": "❌ Потрібно ГОДИНА ХВИЛИНА (година 0–23, хвилина 0–59).\nПриклад: /time reminder 9 0",
+    "unknown_command": "❌ Невідома команда. Доступні:\n\n{usage}",
+    "no_job_queue": "⚠️ Планувальник не запущено — нагадування і бекап не надсилатимуться."
+  },
+  "format": {
+    "thousands_separator": " ",
+    "decimal_separator": ","
+  },
+  "duration": {
+    "minutes": "{minutes} хв",
+    "hours": "{hours} год",
+    "hours_minutes": "{hours} год {minutes} хв"
+  }
+}

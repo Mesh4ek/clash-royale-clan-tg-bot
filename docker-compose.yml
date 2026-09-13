@@ -1,0 +1,29 @@
+name: clash-bot
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: clash-bot:2026
+    container_name: clash-bot
+    restart: unless-stopped
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_PATH: ${DATABASE_PATH:-/app/data/database.db}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      REQUEST_TIMEOUT_SECONDS: ${REQUEST_TIMEOUT_SECONDS:-10}
+      RIVER_RACE_DECKS_PER_DAY: ${RIVER_RACE_DECKS_PER_DAY:-4}
+    volumes:
+      - bot-data:/app/data
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m
+    stop_grace_period: 30s
+
+volumes:
+  bot-data:

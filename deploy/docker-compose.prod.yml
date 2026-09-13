@@ -1,0 +1,28 @@
+# Production compose: runs the image from GHCR instead of building it locally.
+# BOT_IMAGE is set during deployment (e.g. ghcr.io/owner/clash-bot:latest).
+name: clash-bot
+
+services:
+  bot:
+    image: ${BOT_IMAGE:-ghcr.io/mesh4ek/clash-bot:latest}
+    container_name: clash-bot
+    restart: unless-stopped
+    env_file:
+      - path: ../.env
+        required: true
+    environment:
+      DATABASE_PATH: ${DATABASE_PATH:-/app/data/database.db}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      REQUEST_TIMEOUT_SECONDS: ${REQUEST_TIMEOUT_SECONDS:-10}
+      RIVER_RACE_DECKS_PER_DAY: ${RIVER_RACE_DECKS_PER_DAY:-4}
+    volumes:
+      - bot-data:/app/data
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m
+    stop_grace_period: 30s
+
+volumes:
+  bot-data:

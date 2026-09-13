@@ -1,0 +1,151 @@
+{
+  "common": {
+    "active_tab": "· {label} ·"
+  },
+  "commands": {
+    "start": "Start and menu",
+    "war": "War deck status",
+    "race": "River race: decks, medals, projection",
+    "rank": "Clan rank in its region",
+    "missing": "Players not in the TG group"
+  },
+  "menu": {
+    "war": "{chart} War",
+    "race": "🏁 Race",
+    "rank": "{trophy} Rank",
+    "missing": "{people} Missing"
+  },
+  "registration": {
+    "welcome": "{wave} Welcome to the clan!\n\n{phone} How to register:\n1. Open Clash Royale → your profile (player icon)\n2. Tap the tag under your name (example in the photo: #YG9JVJY2)\n3. Choose “Copy Tag”\n4. Send the copied tag here in this chat\n\n{pin} Tag example: #9YJ8P2L (always starts with #)\n\n{loop} If you have several accounts in the clan, register all of them, <b>but register your main one first.</b> It will be your name in the group.\n\n{check} Once you're registered, you'll get a link to the clan's Telegram group.",
+    "success": "{check} <b>Registration successful!</b>\n\n{gamepad} <b>Player:</b> {name}\n\n{point} <b>Join the clan chat:</b>\n{link}\n\n{lock} <i>Don't share this link — it only works for you. Only registered players can join.</i>",
+    "success_in_group": "{check} <b>Registration successful!</b>\n\n{gamepad} <b>Player:</b> {name}\n\nYou're already in the clan group — nothing else to do.",
+    "already_registered": "{check} <b>You're already registered</b>\n\n{point} <b>Link to join the group:</b>\n{link}\n\n{lock} <i>Don't share this link — it only works for you.</i>",
+    "bad_tag_format": "Invalid tag format. Example: #9YJ8P2L",
+    "player_not_found": "Player not found.",
+    "player_not_in_clan": "This player isn't in our clan.",
+    "tag_already_taken": "This account is already registered.",
+    "already_registered_no_invite": "You're already registered, but the invite couldn't be created — contact an admin.",
+    "invite_failed": "Couldn't create an invite.",
+    "member_joined": "{wave} {name} joined the group!",
+    "member_left": "🚪 {name} left the group.",
+    "member_removed": "🚫 {name} was removed from the group."
+  },
+  "access": {
+    "not_registered": "You're not registered. Send /start and your Clash Royale player tag to join.",
+    "join_group_hint": "Join the clan group. Tap War, Race, Rank or Missing to get the link.",
+    "join_group_with_link": "Join the group to use clan commands.\n\nLink: {link}",
+    "join_group_no_link": "Join the group to use clan commands. Ask an admin for the link.",
+    "not_allowed": "Not allowed.",
+    "no_admins_configured": "LOGS_ALLOWED_TG_IDS is empty in .env — there are no admins."
+  },
+  "unregister": {
+    "usage": "Remove a player's registration:\n/unregister #TAG — by Clash Royale tag\n/unregister @username — by Telegram username\n/unregister 123456789 — by Telegram ID",
+    "not_found": "Nothing registered for “{query}”.",
+    "confirm": "Telegram: {telegram}\nRegistered accounts:\n{accounts}\n\nDeleting all accounts also removes the player from the Telegram group.\n\nWhat should be deleted?",
+    "account": "• {name} · {tag}",
+    "account_main": "• {name} · {tag} (main)",
+    "telegram_with_username": "@{username} (id {id})",
+    "telegram_id_only": "id {id}",
+    "delete_one": "🗑 Only {tag}",
+    "delete_all": "🗑 All accounts ({count})",
+    "cancel": "Cancel",
+    "cancelled": "Cancelled, nothing was deleted.",
+    "done": "✅ Deleted:\n{accounts}",
+    "accounts_left": "The player's other accounts remain, so they stay in the group.",
+    "group_removed": "👢 Also removed from the Telegram group. After registering again with /start, they'll get a link to come back.",
+    "group_not_member": "The player wasn't in the Telegram group. They can register again with /start.",
+    "group_failed": "⚠️ Couldn't remove the player from the Telegram group — do it manually or check that the bot can ban users. They can register again with /start.",
+    "nothing_deleted": "These accounts are already deleted."
+  },
+  "api": {
+    "token_error": "API error (check the Clash Royale token).",
+    "rate_limited": "The API is overloaded. Try again later.",
+    "generic_error": "Clash Royale API error. Try again later."
+  },
+  "war": {
+    "no_active_war": "There's no active war right now. War runs from Thursday to Monday.",
+    "no_active_war_alert": "There's no active war right now. War runs from Thursday to Monday. No point notifying the group.",
+    "remind_too_early_alert": "🔕 Too early. The group can be notified {hours} h before the day ends — from {time} UTC.",
+    "report": "Decks not used today:\n\n{players}",
+    "not_in_telegram": "<b>Not in the Telegram group:</b>\n{players}",
+    "all_decks_used": "🎉 All decks used! Well done!",
+    "load_failed": "Couldn't load war data.",
+    "remind_all_button": "🔔 Notify everyone",
+    "nobody_to_remind": "Nobody has decks left to play",
+    "no_players_in_db": "No players in the database",
+    "group_send_failed": "Couldn't send the message to the group. Try again later.",
+    "no_username_alert": "This user has no Telegram @username. They can add one in Settings → Username to get a direct link. Or message them in the game.",
+    "auto_reminder": "{alarm} ATTENTION! War ends in {time_left}!\n\nSome players still have unused decks — play now!\n\n{mentions}\n\n⏰ Automatic reminder",
+    "manual_reminder": "{warning} Some players still have decks to play. Time left: {time_left}\n\n{mentions}\n\nNotified by: {label}",
+    "someone": "Someone",
+    "unknown_player": "player",
+    "tab_today": "Today",
+    "tab_day": "Day {day}",
+    "day_report": "Decks not used · day {day}, {date}:\n\n{players}",
+    "day_report_approx": "Decks not used · day {day}, {date}:\n\n{players}\n\n<i>Approximate: the bot's latest data for that day is from {time} UTC.</i>",
+    "day_all_used": "🎉 All decks were used that day!",
+    "day_no_data_alert": "No data for day {day}: the bot wasn't collecting stats yet."
+  },
+  "race": {
+    "title_war": "🏁 War · day {day} of {days}",
+    "title_colosseum": "🏟 Colosseum · day {day} of {days}",
+    "today": "<b>{title}</b>\n⏳ Day ends in: {time_left}\n\n{clans}\n\n<i>{legend}</i>",
+    "legend_war": "🃏 decks · 🏅 medals today · ⌀ medals per deck · 🎯 projected today · ⛵ boat",
+    "legend_colosseum": "🃏 decks · 🏅 medals today · ⌀ medals per deck · 🎯 projected today · Σ medals this week",
+    "clan": "{place}. {name}\n🃏 {decks}/{max_decks} · 🏅 {medals} · ⌀ {average}\n🎯 {projected} · ⛵ {boat}",
+    "clan_colosseum": "{place}. {name}\n🃏 {decks}/{max_decks} · 🏅 {medals} · ⌀ {average}\n🎯 {projected} · Σ {total}",
+    "training": "💤 Training days now — the war starts on Thursday.\n\nPast wars are in the “History” tab.",
+    "days": "📅 <b>War by day</b>\n\n{days}",
+    "day": "<b>Day {day}</b>\n{clans}",
+    "day_clan": "{place}. {name} · 🏅 {medals}",
+    "no_finished_days": "📅 <b>War by day</b>\n\nNo finished days in this war yet.",
+    "history": "📜 <b>Past wars</b>\n\n{weeks}",
+    "history_week": "<b>Season {season} · week {week}</b> · {date}\n#{place} · 🏅 {medals}\n🃏 {decks} · ⌀ {average}",
+    "history_week_boat": "<b>Season {season} · week {week}</b> · {date}\n#{place} · 🏅 {medals}\n🃏 {decks} · ⌀ {average} · ⛵ {boat}",
+    "no_history": "📜 <b>Past wars</b>\n\nNo past wars yet.",
+    "tab_today": "🏁 Today",
+    "tab_days": "📅 By day",
+    "tab_history": "📜 History",
+    "load_failed": "Couldn't load river race data."
+  },
+  "clan": {
+    "rank": "{trophy} <b>Clan rank</b>\n\n{flag} {location}: <b>#{rank}</b>",
+    "rank_not_in_top": "{trophy} <b>Clan rank</b>\n\n{flag} {location}: not in the ranking",
+    "no_location": "The clan has no region set in Clash Royale, so there is no ranking to show.",
+    "load_failed": "Couldn't load clan data.",
+    "missing_report": "{check} In the clan and registered:\n\n{present}\n\n{telegram} Not in the TG group:\n\n{missing}",
+    "nobody": "- nobody"
+  },
+  "admin": {
+    "panel": "🛠 Admin panel\n\n/logs — last 100 lines of the bot log\n/data — all registered players (table)\n\n/time — war schedule in UTC: view and change\n{time_usage}\n\n/unregister — remove a player's registration (and from the Telegram group)\n/unregister #TAG · @username · Telegram ID\n\nThese commands work only here, in a private chat with the bot.",
+    "panel_backup": "💾 Every Thursday at the war day end time, a /data backup is sent to the first admin in LOGS_ALLOWED_TG_IDS.",
+    "empty": "(empty)",
+    "part": "Part {index}/{total}",
+    "backup_header": "Weekly database backup"
+  },
+  "time": {
+    "schedule": "⏱ War schedule (UTC)\n🕐 Now: {now} UTC\n\n• War day ends: {end}\n• Group reminder: {reminder} {reminder_note}\n• “Notify everyone” button: from {notify_from} ({notify_hours} h before end)\n• Weekly /data backup: {backup}",
+    "reminder_lead": "(Fri–Mon, {lead} before end)",
+    "reminder_not_before_end": "(Fri–Mon)\n  ⚠️ Not before war day end — fix with /time auto",
+    "backup_next": "Thu {date}, {time}",
+    "backup_off": "off",
+    "usage": "/time boundary H M — war day end\n/time reminder H M — group reminder\n/time auto — reminder 30 min before end\n/time auto H M — war day end + reminder 30 min before\n/time notify H — “Notify everyone” allowed H h before end",
+    "set_end": "✅ War day end set to {end}",
+    "set_reminder": "✅ Group reminder set to {reminder}",
+    "set_both": "✅ War day end set to {end}, group reminder to {reminder}",
+    "set_notify": "✅ “Notify everyone” allowed from {notify_from} ({notify_hours} h before end)",
+    "invalid_hours": "❌ Expected hours from 1 to 24.\nExample: /time notify 12",
+    "invalid_value": "❌ Expected HOUR MINUTE (hour 0–23, minute 0–59).\nExample: /time reminder 9 0",
+    "unknown_command": "❌ Unknown command. Use one of:\n\n{usage}",
+    "no_job_queue": "⚠️ Job queue isn't running — the reminder and backup won't be sent."
+  },
+  "format": {
+    "thousands_separator": ",",
+    "decimal_separator": "."
+  },
+  "duration": {
+    "minutes": "{minutes} min",
+    "hours": "{hours} h",
+    "hours_minutes": "{hours} h {minutes} min"
+  }
+}

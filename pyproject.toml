@@ -1,0 +1,23 @@
+[project]
+name = "clash-royale-clan-tg-bot"
+version = "0.1.0"
+description = "Telegram bot for Clash Royale clan management"
+readme = "README.md"
+requires-python = ">=3.13"
+# Runtime dependencies are listed once, in requirements.txt: the bot runs from the source tree
+# (it loads locales/ and assets/ next to src/), so it is not installed as a package.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 120
+src = ["src", "main.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = [
+    "E501",  # line length is handled by the formatter
+]
